@@ -11,32 +11,45 @@ let seattle = {
   min: 23,
   max: 65,
   avg: 6.3,
+  // a method to calculate random number of customers per hour
+  randomSeattleCust: function (min=this.min, max=this.max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let randomNum = Math.floor(Math.random() * ((max - min + 1) + min));
+    let customers = `${randomNum} customers per hour.`
+    return customers; 
+  },
+  // a method to calculate and populate our number of cookies sold per hour array
+  // a method to render the list items
 };
 
-let tokyo = {
-  name: 'Tokyo',
-  min: 3,
-  max: 24,
-  avg: 1.2,
-};
+seattle.randomSeattleCust();
+console.log(seattle.randomSeattleCust());
 
-let dubai = {
-  name: 'Dubai',
-  min: 11,
-  max: 38,
-  avg: 3.7,
-};
+// let tokyo = {
+//   name: 'Tokyo',
+//   min: 3,
+//   max: 24,
+//   avg: 1.2,
+// };
 
-let paris = {
-  name: 'Paris',
-  min: 20,
-  max: 38,
-  avg: 2.3,
-};
+// let dubai = {
+//   name: 'Dubai',
+//   min: 11,
+//   max: 38,
+//   avg: 3.7,
+// };
 
-let lima = {
-  name: 'Lima',
-  min: 2,
-  max: 16,
-  avg: 4.6,
-};
+// let paris = {
+//   name: 'Paris',
+//   min: 20,
+//   max: 38,
+//   avg: 2.3,
+// };
+
+// let lima = {
+//   name: 'Lima',
+//   min: 2,
+//   max: 16,
+//   avg: 4.6,
+// };
