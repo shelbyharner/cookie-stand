@@ -8,9 +8,9 @@ console.log(hours);
 
 let seattle = {
   name: 'Seattle',
-  min: 23,
-  max: 65,
-  avg: 6.3,
+  minCust: 23,
+  maxCust: 65,
+  avgCookies: 6.3,
   // a method to calculate random number of customers per hour
   randomSeattleCust: function (min=this.min, max=this.max) {
     min = Math.ceil(min);
