@@ -2,7 +2,7 @@
 
 console.log('Hello Cookie Lovers');
 
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 console.log(hours);
 
@@ -11,16 +11,22 @@ let seattle = {
   minCust: 23,
   maxCust: 65,
   avgCookies: 6.3,
-  cookiesSoldArray: [],
-  dayStoreTotal: 0,
+
   // a method to calculate random number of customers per hour
   randomCustEachHour: function (){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  // a method to calculate and populate our number of cookies sold per hour array
-  cookiesEachHour: function (){
 
+  // a method to calculate and populate our number of cookies sold per hour array
+  cookiesSoldArray: [],
+  cookieTotal: 0,
+  cookiesEachHour: function (){
+    this.randomCustEachHour();
+    for (let i = 0; i < hours.length; i++){
+      this.cookiesSoldArray.push(Math.ceil(this.randomCustEachHour() * this.avgCookies));
+    }
   },
+  
   // a method to render the list items
   render: function(){
 
@@ -29,6 +35,7 @@ let seattle = {
 
 // seattle.render();
 console.log(seattle.randomCustEachHour());
+console.log(seattle.cookiesEachHour());
 
 
 // let tokyo = {
