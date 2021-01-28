@@ -6,6 +6,8 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 console.log(hours);
 
+let seattleList = document.getElementById('Seattle');
+
 let seattle = {
   name: 'Seattle',
   minCust: 23,
@@ -26,16 +28,25 @@ let seattle = {
       this.cookiesSoldArray.push(Math.ceil(this.randomCustEachHour() * this.avgCookies));
     }
   },
-  
+
   // a method to render the list items
   render: function(){
-
+    this.cookiesEachHour();
+    for (let i = 0; i < this.cookiesSoldArray.length; i++){
+      this.cookieTotal = this.cookieTotal + this.cookiesSoldArray[i];
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${(this.cookiesSoldArray[i])} cookies`;
+      seattleList.appendChild(li);
+    }
+    let totalDaySales = document.createElement('li');
+    totalDaySales.textContent = `Total: ${this.cookieTotal} cookies`;
+    seattleList.appendChild(totalDaySales);
   },
 };
 
-// seattle.render();
-console.log(seattle.randomCustEachHour());
-console.log(seattle.cookiesEachHour());
+// console.log(seattle.randomCustEachHour());
+// console.log(seattle.cookiesEachHour());
+seattle.render();
 
 
 // let tokyo = {
