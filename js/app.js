@@ -11,20 +11,25 @@ let seattle = {
   minCust: 23,
   maxCust: 65,
   avgCookies: 6.3,
+  cookiesSoldArray: [],
+  dayStoreTotal: 0,
   // a method to calculate random number of customers per hour
-  randomSeattleCust: function (min=this.min, max=this.max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    let randomNum = Math.floor(Math.random() * ((max - min + 1) + min));
-    let customers = `${randomNum} customers per hour.`
-    return customers; 
+  randomCustEachHour: function (){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   // a method to calculate and populate our number of cookies sold per hour array
+  cookiesEachHour: function (){
+
+  },
   // a method to render the list items
+  render: function(){
+
+  },
 };
 
-seattle.randomSeattleCust();
-console.log(seattle.randomSeattleCust());
+// seattle.render();
+console.log(seattle.randomCustEachHour());
+
 
 // let tokyo = {
 //   name: 'Tokyo',
