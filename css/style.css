@@ -1,4 +1,18 @@
 body {
   width: 960px;
+  padding: 10px;
+  margin: 15px;
   background-color: salmon;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  border: 15px;
+}
+
+ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
