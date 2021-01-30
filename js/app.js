@@ -7,6 +7,8 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 // console.log(hours);
 
 let cookieTable = document.getElementById('cookie-table');
+let tableHeader = document.getElementById('table-header');
+let tableFooter = document.getElementById('table-footer');
 const allLocations = [];
 
 function StoreLocation(name, minCust, maxCust, avgCookies) {
@@ -47,6 +49,19 @@ StoreLocation.prototype.render = function () {
   td.textContent = this.cookieTotal;
   tr.appendChild(td);
 };
+
+function renderHeader() {
+  let tr = document.createElement('tr');
+  tableHeader.appendChild(tr);
+  let th = document.createElement('th');
+  th.textContent = '';
+  tr.appendChild(th);
+  for (let i = 0; i < hours.length; i++){
+    let td = document.createElement('td');
+    td.textContent = hours[i];
+    tr.appendChild(td);
+  }
+}
 
 let locationOne = new StoreLocation('Seattle', 23, 65, 6.3);
 let locationTwo = new StoreLocation('Tokyo', 3, 24, 1.2);
