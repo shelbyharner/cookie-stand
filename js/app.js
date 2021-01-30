@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 console.log('Hello Cookie Lovers');
 
@@ -6,11 +6,7 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 console.log(hours);
 
-let seattleList = document.getElementById('Seattle');
-let tokyoList = document.getElementById('Tokyo');
-let dubaiList = document.getElementById('Dubai');
-let parisList = document.getElementById('Paris');
-let limaList = document.getElementById('Lima');
+let cookieTable = document.getElementById('cookie-table');
 
 
 let seattle = {
