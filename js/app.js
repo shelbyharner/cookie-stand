@@ -39,10 +39,10 @@ StoreLocation.prototype.render = function () {
   let th = document.createElement('th');
   th.textContent = this.name;
   tr.appendChild(th);
-    for (let i = 0; i < this.cookiesSoldArray.length; i++){
-      let td = document.createElement('td');
-      td.textContent = this.cookiesSoldArray[i];
-      tr.appendChild(td);
+  for (let i = 0; i < this.cookiesSoldArray.length; i++){
+    let td = document.createElement('td');
+    td.textContent = this.cookiesSoldArray[i];
+    tr.appendChild(td);
   }
   let td = document.createElement('td');
   td.textContent = this.cookieTotal;
