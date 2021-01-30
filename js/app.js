@@ -61,6 +61,17 @@ function renderHeader() {
     td.textContent = hours[i];
     tr.appendChild(td);
   }
+  let td = document.createElement('td');
+  td.textContent = 'Daily Store Totals';
+  tr.appendChild(td);
+}
+
+function renderFooter() {
+  let tr = document.createElement('tr');
+  tableFooter.appendChild(tr);
+  let th = document.createElement('th');
+  th.textContent = 'Totals';
+  tr.appendChild(th);
 }
 
 let locationOne = new StoreLocation('Seattle', 23, 65, 6.3);
@@ -76,3 +87,5 @@ function renderAll() {
 }
 
 renderAll();
+renderHeader();
+renderFooter();
