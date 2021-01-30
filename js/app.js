@@ -24,7 +24,6 @@ StoreLocation.prototype.randomCustEachHour = function () {
 };
 
 StoreLocation.prototype.cookiesEachHour = function () {
-  let tr = document.createElement('tr');
   this.randomCustEachHour();
   for (let i = 0; i < hours.length; i++){
     this.cookiesSoldArray.push(Math.ceil(this.randomCustEachHour() * this.avgCookies));
@@ -58,7 +57,6 @@ let locationFive = new StoreLocation('Lima', 2, 16, 4.6);
 function renderAll() {
   for (let i = 0; i < allLocations.length; i++) {
     allLocations[i].render();
-    allLocations[i].renderSection();
   }
 }
 
