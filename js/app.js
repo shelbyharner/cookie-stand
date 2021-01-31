@@ -2,7 +2,7 @@
 
 console.log('Hello Cookie Lovers');
 
-let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 // console.log(hours);
 
@@ -52,7 +52,6 @@ StoreLocation.prototype.render = function () {
 
 function renderHeader() {
   let tr = document.createElement('tr');
-  tableHeader.appendChild(tr);
   let th = document.createElement('th');
   th.textContent = '';
   tr.appendChild(th);
@@ -64,21 +63,41 @@ function renderHeader() {
   let td = document.createElement('td');
   td.textContent = 'Daily Store Totals';
   tr.appendChild(td);
+  tableHeader.appendChild(tr);
+}
+
+// Help from TA Bryant for Lab 7 stretch goal
+function getGrandTotal() {
+  const grandTotal = new Array(hours.length + 1);
+  grandTotal.fill(0);
+  for (let i = 0; i < allLocations.length; i++){
+    for (let j = 0; j < allLocations[i].cookiesSoldArray.length; j++){
+      grandTotal[j] += allLocations[i].cookiesSoldArray[j];
+      grandTotal[grandTotal.length - 1] += allLocations[i].cookiesSoldArray[j];
+    }
+  }
+  return grandTotal;
 }
 
 function renderFooter() {
+  let grandTotal = getGrandTotal();
   let tr = document.createElement('tr');
-  tableFooter.appendChild(tr);
   let th = document.createElement('th');
   th.textContent = 'Totals';
   tr.appendChild(th);
+  for (let i = 0; i < grandTotal.length; i++){
+    let td = document.createElement('td');
+    td.textContent = grandTotal[i];
+    tr.appendChild(td);
+  }
+  tableFooter.appendChild(tr);
 }
 
-let locationOne = new StoreLocation('Seattle', 23, 65, 6.3);
-let locationTwo = new StoreLocation('Tokyo', 3, 24, 1.2);
-let locationThree = new StoreLocation('Dubai', 11, 38, 3.7);
-let locationFour = new StoreLocation('Paris', 20, 38, 2.3);
-let locationFive = new StoreLocation('Lima', 2, 16, 4.6);
+const locationOne = new StoreLocation('Seattle', 23, 65, 6.3);
+const locationTwo = new StoreLocation('Tokyo', 3, 24, 1.2);
+const locationThree = new StoreLocation('Dubai', 11, 38, 3.7);
+const locationFour = new StoreLocation('Paris', 20, 38, 2.3);
+const locationFive = new StoreLocation('Lima', 2, 16, 4.6);
 
 function renderAll() {
   for (let i = 0; i < allLocations.length; i++) {
