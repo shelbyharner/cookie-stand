@@ -20,7 +20,8 @@ h1 {
 
 table {
   font-family: 'Englebert', sans-serif;
-  background-color: rgb(250, 212, 208);
+  background-color: navy;
+  color: white;
   border: 5px;
   border-style: double;
   margin: 30px;
@@ -29,9 +30,9 @@ table {
 }
 
 th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-top: 1px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   text-align: center;
   height: 100%;
   margin: 10px;
