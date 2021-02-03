@@ -91,3 +91,27 @@ main li {
   margin-left: 40px;
   padding-top: 40px;
 }
+
+main article {
+  width: 50%;
+  float: right;
+}
+
+main h2 {
+  margin-top: 40px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 20px;
+}
+
+#Pat-Family {
+  width: 400px;
+  float: left;
+  margin-left: 100px;
+  padding-top: 40px;
+}
+
+article p {
+  margin-top: 10px;
+  padding-right: 100px;
+  line-height: 20px;
+}
