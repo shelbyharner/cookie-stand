@@ -77,6 +77,10 @@ li:hover {
   background-color: white;
 }
 
+#Chinook {
+  height: 35px;
+}
+
 main img {
   width: 400px;
 }
