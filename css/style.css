@@ -14,8 +14,8 @@ header {
 
 h1 {
   font-family: 'Lobster Two', cursive;
+  color: rgb(3, 61, 109);
   font-size: 60px;
-  font-weight: bold;
 }
 
 table {
