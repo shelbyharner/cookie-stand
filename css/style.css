@@ -1,29 +1,29 @@
 
   body {
-  width: 100%;
-  padding: 10px;
-  margin: 15px;
+  font-family: 'Hepta Slab', serif;
   background-color: #F7F3F2;
 }
 
-h1 {
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  text-decoration: underline;
+header {
   background-color: #EB8E66;
-  width: 95%;
-  margin: 10px;
-  padding: 5px;
+  text-align: center;
+  width: auto;
+  height: 100px;
+  padding-top: 50px;
+}
+
+h1 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 60px;
+  font-weight: bold;
 }
 
 table {
-  background-color: white;
+  font-family: 'Englebert', sans-serif;
+  background-color: rgb(250, 212, 208);
   border: 5px;
   border-style: double;
-  border-collapse: collapse;
-  text-align: center;
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
   width: 90%;
 }
@@ -38,20 +38,24 @@ th, td {
   padding: 10px;
 }
 
-img {
+nav {
+  background-color: #F65F5D;
+  width: auto;
+}
+
+nav img {
   height: 30px;
-  margin-bottom: 15px;
+  padding: 10px;
 }
 
 nav ul {
   list-style-type: none;
-  background-color: #F65F5D;
-  width: 95%;
+  padding: 10px;
 }
 
 nav ul li {
   display: inline-block;
-  padding: 10px;
+  margin-left: 50px;
 }
 
 a {
@@ -70,4 +74,14 @@ a:link {
 
 li:hover {
   background-color: white;
+}
+
+main img {
+  width: 400px;
+}
+
+main li {
+  float: left;
+  margin-left: 40px;
+  padding-top: 40px;
 }
