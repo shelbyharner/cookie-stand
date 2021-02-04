@@ -146,3 +146,9 @@ section h3 {
   font-size: 20px;
   text-decoration: underline;
 }
+
+footer {
+  background-color: #EB8E66;
+  height: 100px;
+  margin-top: 30px;
+}
