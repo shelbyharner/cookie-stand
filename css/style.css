@@ -19,6 +19,13 @@ h1 {
   font-size: 60px;
 }
 
+main h2 {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
 table {
   font-family: 'Englebert', sans-serif;
   background-color: navy;
@@ -97,7 +104,7 @@ main article {
   float: right;
 }
 
-main h2 {
+article h2 {
   margin-top: 40px;
   font-family: 'Lobster Two', cursive;
   font-size: 20px;
