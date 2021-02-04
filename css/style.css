@@ -1,5 +1,5 @@
 
-  body {
+body {
   font-family: 'Hepta Slab', serif;
   color: black;
   background-color: #F7F3F2;
@@ -8,7 +8,6 @@
 header {
   background-color: #EB8E66;
   text-align: center;
-  width: auto;
   height: 100px;
   padding-top: 50px;
 }
@@ -17,13 +16,6 @@ h1 {
   font-family: 'Lobster Two', cursive;
   color: rgb(3, 61, 109);
   font-size: 60px;
-}
-
-main h2 {
-  text-align: center;
-  font-size: 30px;
-  text-decoration: underline;
-  margin-top: 30px;
 }
 
 table {
@@ -89,8 +81,20 @@ li:hover {
   height: 35px;
 }
 
+main {
+  width: 1100px;
+  margin: auto;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
 main img {
-  width: 400px;
+  width: 300px;
 }
 
 main li {
@@ -105,9 +109,10 @@ main article {
 }
 
 article h2 {
+  text-align: left;
   margin-top: 40px;
   font-family: 'Lobster Two', cursive;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #Pat-Family {
@@ -121,4 +126,16 @@ article p {
   margin-top: 10px;
   padding-right: 100px;
   line-height: 20px;
+}
+
+section {
+  clear: both;
+  padding-top: 50px;
+  line-height: 30px;
+}
+
+section h3 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 20px;
+  text-decoration: underline;
 }
