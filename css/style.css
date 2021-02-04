@@ -1,39 +1,154 @@
+
 body {
-  width: 960px;
-  padding: 10px;
-  margin: 15px;
-  background-color: salmon;
+  font-family: 'Hepta Slab', serif;
+  color: black;
+  background-color: #F7F3F2;
+}
+
+header {
+  background-color: #EB8E66;
+  text-align: center;
+  height: 100px;
+  padding-top: 50px;
 }
 
 h1 {
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: underline;
-  border: 15px;
-}
-
-ul {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-family: 'Lobster Two', cursive;
+  color: rgb(3, 61, 109);
+  font-size: 60px;
 }
 
 table {
-  background-color: white;
+  font-family: 'Englebert', sans-serif;
+  background-color: navy;
+  color: white;
   border: 5px;
   border-style: double;
-  border-collapse: collapse;
-  text-align: center;
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
-  width: 100%;
+  width: 90%;
 }
 
 th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-top: 1px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   text-align: center;
   height: 100%;
   margin: 10px;
   padding: 10px;
+}
+
+nav {
+  background-color: #F65F5D;
+  width: auto;
+}
+
+nav img {
+  height: 30px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+a {
+  color: black;
+}
+
+a:link {
+  float: left;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 10px;
+}
+
+li:hover {
+  background-color: white;
+}
+
+#Chinook {
+  height: 35px;
+}
+
+main {
+  width: 1100px;
+  margin: auto;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
+#shirt {
+  width: 200px;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+main img {
+  width: 300px;
+}
+
+main li {
+  float: left;
+  margin-left: 40px;
+  padding-top: 40px;
+}
+
+main article {
+  width: 50%;
+  float: right;
+}
+
+article h2 {
+  text-align: left;
+  margin-top: 40px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+}
+
+#Pat-Family {
+  width: 400px;
+  float: left;
+  margin-left: 100px;
+  padding-top: 40px;
+}
+
+article p {
+  margin-top: 10px;
+  padding-right: 100px;
+  line-height: 20px;
+}
+
+section {
+  clear: both;
+  padding-top: 50px;
+  line-height: 30px;
+}
+
+section h3 {
+  font-family: 'Lobster Two', cursive;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #EB8E66;
+  height: 100px;
+  margin-top: 30px;
 }
