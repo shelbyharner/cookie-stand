@@ -93,6 +93,13 @@ main h2 {
   margin-top: 30px;
 }
 
+#shirt {
+  width: 200px;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
 main img {
   width: 300px;
 }
