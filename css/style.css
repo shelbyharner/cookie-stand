@@ -39,6 +39,11 @@ form button {
   border-radius: 25px;
 }
 
+form button:hover {
+  background-color: #F65F5D;
+  transition: 350ms;
+}
+
 table {
   font-family: 'Englebert', sans-serif;
   background-color: navy;
