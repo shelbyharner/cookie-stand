@@ -6,6 +6,7 @@ const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm',
 
 // console.log(hours);
 
+let cookieForm = document.querySelector('form');
 let cookieTable = document.getElementById('cookie-table');
 let tableHeader = document.getElementById('table-header');
 let tableFooter = document.getElementById('table-footer');
@@ -93,6 +94,20 @@ function renderFooter() {
   tableFooter.appendChild(tr);
 }
 
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let locationName = event.target.locationname.value;
+  let minimumCustomer = +event.target.minimumcustomer.value;
+  let maximumCustomer = +event.target.maximumcustomer.value;
+  let averageCookieSale = +event.target.averagecookiesale.value;
+
+  let newStore = new StoreLocation(locationName, minimumCustomer, maximumCustomer, averageCookieSale);
+  newStore.render();
+  tableFooter.removeChild(tableFooter.lastChild);
+  renderFooter();
+}
+
 const locationOne = new StoreLocation('Seattle', 23, 65, 6.3);
 const locationTwo = new StoreLocation('Tokyo', 3, 24, 1.2);
 const locationThree = new StoreLocation('Dubai', 11, 38, 3.7);
@@ -108,3 +123,5 @@ function renderAll() {
 renderAll();
 renderHeader();
 renderFooter();
+
+cookieForm.addEventListener('submit', handleSubmit);
