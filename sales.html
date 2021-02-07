@@ -29,19 +29,19 @@
         <fieldset>
           <legend>Add Store Location</legend>
           <label>Store Name
-            <input type="text" name="locationname">
+            <input type="text" name="locationname" required="required">
           </label>
 
           <label>Minimum Customer
-            <input type="number" name="minimumcustomer">
+            <input type="number" name="minimumcustomer" min="0" required="required">
           </label>
 
           <label>Maximum Customer
-            <input type="number" name="maximumcustomer">
+            <input type="number" name="maximumcustomer" min="0" required="required">
           </label>
 
           <label>Average Cookie Sale
-            <input type="number" name="averagecookiesale">
+            <input type="number" name="averagecookiesale" min="0" required="required">
           </label>
 
           <button type="submit">Send</button>
